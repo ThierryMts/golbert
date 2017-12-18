@@ -1,0 +1,44 @@
+<div class="row">
+  <div class="col-md-4 col-md-offset-4 text-center">
+
+
+<br>
+    <%= link_to "Connexion avec facebook", "/auth/facebook", id: "sign_in", class:"btn btn-primary-fb" %>
+    <br><br>
+    <center>ou<center>
+      <hr>
+      
+
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+
+ <div class="form-group">
+ 
+    <%= f.text_field :fullname, autofocus: true, class: "form-control", placeholder: "Username" %>
+  </div>
+
+
+  <div class="form-group">
+   
+    <%= f.email_field :email, autofocus: true, class: "form-control", placeholder: "Adresse e-mail" %>
+  </div>
+
+  <div class="form-group">
+ 
+  <br />
+    <%= f.password_field :password, autocomplete: "off", class: "form-control", placeholder: "Créér un mot de passe" %>
+  </div>
+
+  <div class="form-group">
+  
+    <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control", placeholder: "Confirmez votre de mot de passe" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Inscription", class: "btn btn primary" %>
+  </div>
+<% end %>
+
+</div>
+</div>
